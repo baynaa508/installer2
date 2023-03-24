@@ -1,0 +1,516 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio\2019\enterprise\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="16.0">
+ <Targets>
+  <Target Name="D:\WebInstaller Project\WebInstaller\bin\Release\MASUInstaller.exe">
+   <Modules>
+    <Module Name="masuinstaller.exe">
+     <Messages>
+      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="NonBreaking">
+       <Issue Name="NoStrongName" Certainty="95" Level="CriticalError">Sign 'MASUInstaller.exe' with a strong name key.</Issue>
+      </Message>
+      <Message Id="MASU" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="Breaking">
+       <Issue Name="Assembly" Certainty="85" Level="Error">Correct the casing of 'MASU' in assembly name 'MASUInstaller.exe' by changing it to 'Masu'.</Issue>
+      </Message>
+      <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="NonBreaking">
+       <Issue Certainty="95" Level="Error">Mark 'MASUInstaller.exe' with CLSCompliant(true) because it exposes externally visible types.</Issue>
+      </Message>
+      <Message TypeName="MarkAssembliesWithNeutralResourcesLanguage" Category="Microsoft.Performance" CheckId="CA1824" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="NonBreaking">
+       <Issue Certainty="95" Level="Warning">Because assembly 'MASUInstaller.exe' contains a ResX-based resource file, mark it with the NeutralResourcesLanguage attribute, specifying the language of the resources within the assembly. This could improve lookup performance the first time a resource is retrieved.</Issue>
+      </Message>
+     </Messages>
+     <Namespaces>
+      <Namespace Name="">
+       <Types>
+        <Type Name="CustomProgressBar" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="DeclareTypesInNamespaces" Category="Microsoft.Design" CheckId="CA1050" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="Breaking">
+           <Issue Certainty="95" Level="Error">'CustomProgressBar' should be declared inside a namespace.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#OnPaint(System.Windows.Forms.PaintEventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="CustomProgressBar.cs" Line="20">In method 'CustomProgressBar.OnPaint(PaintEventArgs)', call System.IDisposable.Dispose on object 'brush' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="CustomProgressBar.cs" Line="17">In externally visible method 'CustomProgressBar.OnPaint(PaintEventArgs)', validate parameter 'e' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="Project">
+       <Types>
+        <Type Name="Program" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#Main(System.String[])" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Windows.Forms.MessageBox.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="Program.cs" Line="29">Method 'Program.Main(string[])' passes a literal string as parameter 'caption' of a call to 'MessageBox.Show(string, string, MessageBoxButtons, MessageBoxIcon)'. Retrieve the following string(s) from a resource table instead: "Алдаа!".</Issue>
+            </Message>
+            <Message Id="Алдаа" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="Program.cs" Line="29">Correct the spelling of the unrecognized token 'Алдаа' in the literal '"Алдаа!"'.</Issue>
+            </Message>
+            <Message Id="args" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="Program.cs" Line="13">Parameter 'args' of 'Program.Main(string[])' is never used. Remove the parameter or use it in the method body.</Issue>
+            </Message>
+            <Message TypeName="SpecifyMessageBoxOptions" Category="Microsoft.Globalization" CheckId="CA1300" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\WebInstaller Project\WebInstaller" File="Program.cs" Line="29">Change 'Program.Main(string[])' to call the MessageBox.Show overload that specifies MessageBoxOptions, and make sure to set MessageBoxOptions.RightAlign and MessageBoxOptions.RtlReading if RightToLeft is set to RightToLeft.Yes on the parent control.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="WebInstallerForm" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#AdminRelauncher()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Console.WriteLine(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="178">Method 'WebInstallerForm.AdminRelauncher()' passes a literal string as parameter 'value' of a call to 'Console.WriteLine(string)'. Retrieve the following string(s) from a resource table instead: "This program must be run as an administrator! \n\n".</Issue>
+            </Message>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="176">Modify 'WebInstallerForm.AdminRelauncher()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CheckForDotNetFrameWork()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="223">The 'this' parameter (or 'Me' in Visual Basic) of 'WebInstallerForm.CheckForDotNetFrameWork()' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CheckForVcredit()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="217">The 'this' parameter (or 'Me' in Visual Basic) of 'WebInstallerForm.CheckForVcredit()' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CheckInternet()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="186">In method 'WebInstallerForm.CheckInternet()', call System.IDisposable.Dispose on object 'new Ping()' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="194">Modify 'WebInstallerForm.CheckInternet()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            </Message>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="186">The 'this' parameter (or 'Me' in Visual Basic) of 'WebInstallerForm.CheckInternet()' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Download()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Windows.Forms.Control.set_Text(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="323">Method 'WebInstallerForm.Download()' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Aлдаа!\n Дахин оролдоно уу.".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="313">Method 'WebInstallerForm.Download()' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Амжилттай суулаа!".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="270">Method 'WebInstallerForm.Download()' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Татаж байна... ,   %".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="278">Method 'WebInstallerForm.Download()' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Цуцлагдлаа.".</Issue>
+            </Message>
+            <Message Id="System.Windows.Forms.MessageBox.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="336">Method 'WebInstallerForm.Download()' passes a literal string as parameter 'caption' of a call to 'MessageBox.Show(string, string, MessageBoxButtons, MessageBoxIcon)'. Retrieve the following string(s) from a resource table instead: "Алдаа!".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="241">Method 'WebInstallerForm.Download()' passes a literal string as parameter 'caption' of a call to 'MessageBox.Show(string, string, MessageBoxButtons, MessageBoxIcon)'. Retrieve the following string(s) from a resource table instead: "Анхаар!".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="241">Method 'WebInstallerForm.Download()' passes a literal string as parameter 'text' of a call to 'MessageBox.Show(string, string, MessageBoxButtons, MessageBoxIcon)'. Retrieve the following string(s) from a resource table instead: "Интернет холболт алга байна.".</Issue>
+            </Message>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="336">Modify 'WebInstallerForm.Download()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            </Message>
+            <Message Id="Aлдаа" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="323">Correct the spelling of the unrecognized token 'Aлдаа' in the literal '"Aлдаа!\n Дахин оролдоно уу."'.</Issue>
+            </Message>
+            <Message Id="Алдаа" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="336">Correct the spelling of the unrecognized token 'Алдаа' in the literal '"Алдаа!"'.</Issue>
+            </Message>
+            <Message Id="Амжилттай" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="313">Correct the spelling of the unrecognized token 'Амжилттай' in the literal '"Амжилттай суулаа!"'.</Issue>
+            </Message>
+            <Message Id="Анхаар" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="241">Correct the spelling of the unrecognized token 'Анхаар' in the literal '"Анхаар!"'.</Issue>
+            </Message>
+            <Message Id="Дахин" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="323">Correct the spelling of the unrecognized token 'Дахин' in the literal '"Aлдаа!\n Дахин оролдоно уу."'.</Issue>
+            </Message>
+            <Message Id="Интернет" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="241">Correct the spelling of the unrecognized token 'Интернет' in the literal '"Интернет холболт алга байна."'.</Issue>
+            </Message>
+            <Message Id="Татаж" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="270">Correct the spelling of the unrecognized token 'Татаж' in the literal '"Татаж байна... "'.</Issue>
+            </Message>
+            <Message Id="Цуцлагдлаа" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="278">Correct the spelling of the unrecognized token 'Цуцлагдлаа' in the literal '"Цуцлагдлаа."'.</Issue>
+            </Message>
+            <Message Id="алга" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="241">Correct the spelling of the unrecognized token 'алга' in the literal '"Интернет холболт алга байна."'.</Issue>
+            </Message>
+            <Message Id="байна" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="241">Correct the spelling of the unrecognized token 'байна' in the literal '"Интернет холболт алга байна."'.</Issue>
+             <Issue Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="270">Correct the spelling of the unrecognized token 'байна' in the literal '"Татаж байна... "'.</Issue>
+            </Message>
+            <Message Id="оролдоно" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="323">Correct the spelling of the unrecognized token 'оролдоно' in the literal '"Aлдаа!\n Дахин оролдоно уу."'.</Issue>
+            </Message>
+            <Message Id="суулаа" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="313">Correct the spelling of the unrecognized token 'суулаа' in the literal '"Амжилттай суулаа!"'.</Issue>
+            </Message>
+            <Message Id="уу" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="323">Correct the spelling of the unrecognized token 'уу' in the literal '"Aлдаа!\n Дахин оролдоно уу."'.</Issue>
+            </Message>
+            <Message Id="холболт" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="241">Correct the spelling of the unrecognized token 'холболт' in the literal '"Интернет холболт алга байна."'.</Issue>
+            </Message>
+            <Message Id="System.String.Format(System.String,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="270">Because the behavior of 'string.Format(string, object)' could vary based on the current user's locale settings, replace this call in 'WebInstallerForm.Download()' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+            <Message TypeName="SpecifyMessageBoxOptions" Category="Microsoft.Globalization" CheckId="CA1300" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="241">Change 'WebInstallerForm.Download()' to call the MessageBox.Show overload that specifies MessageBoxOptions, and make sure to set MessageBoxOptions.RightAlign and MessageBoxOptions.RtlReading if RightToLeft is set to RightToLeft.Yes on the parent control.</Issue>
+             <Issue Certainty="95" Level="Error" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="336">Change 'WebInstallerForm.Download()' to call the MessageBox.Show overload that specifies MessageBoxOptions, and make sure to set MessageBoxOptions.RightAlign and MessageBoxOptions.RtlReading if RightToLeft is set to RightToLeft.Yes on the parent control.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ExtractFilesWithProgress(System.String,System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Windows.Forms.Control.set_Text(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="132">Method 'WebInstallerForm.ExtractFilesWithProgress(string, string)' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Суулгаж байна... ,   %".</Issue>
+            </Message>
+            <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="Breaking">
+             <Issue Name="TooGeneric" Certainty="95" Level="Error" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="143">'WebInstallerForm.ExtractFilesWithProgress(string, string)' creates an exception of type 'Exception', an exception type that is not sufficiently specific and should never be raised by user code. If this exception instance might be thrown, use a different exception type.</Issue>
+            </Message>
+            <Message Id="Суулгаж" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="132">Correct the spelling of the unrecognized token 'Суулгаж' in the literal '"Суулгаж байна... "'.</Issue>
+            </Message>
+            <Message Id="байна" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="132">Correct the spelling of the unrecognized token 'байна' in the literal '"Суулгаж байна... "'.</Issue>
+            </Message>
+            <Message Id="System.String.Format(System.String,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="132">Because the behavior of 'string.Format(string, object)' could vary based on the current user's locale settings, replace this call in 'WebInstallerForm.ExtractFilesWithProgress(string, string)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Init()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="78">In method 'WebInstallerForm.Init()', call System.IDisposable.Dispose on object 'fbd' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message Id="System.Windows.Forms.Control.set_Text(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="38">Method 'WebInstallerForm.Init()' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "C:\\Masu".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="42">Method 'WebInstallerForm.Init()' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Masu энэ компьютерд аль хэдийн суулгасан байна!".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="84">Method 'WebInstallerForm.Init()' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "\\Masu".</Issue>
+            </Message>
+            <Message Id="System.Windows.Forms.FolderBrowserDialog.set_Description(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="79">Method 'WebInstallerForm.Init()' passes a literal string as parameter 'value' of a call to 'FolderBrowserDialog.Description.set(string)'. Retrieve the following string(s) from a resource table instead: "MASU".</Issue>
+            </Message>
+            <Message Id="System.Windows.Forms.MessageBox.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="56">Method 'WebInstallerForm.Init()' passes a literal string as parameter 'caption' of a call to 'MessageBox.Show(string, string, MessageBoxButtons, MessageBoxIcon)'. Retrieve the following string(s) from a resource table instead: "MASU".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="56">Method 'WebInstallerForm.Init()' passes a literal string as parameter 'text' of a call to 'MessageBox.Show(string, string, MessageBoxButtons, MessageBoxIcon)'. Retrieve the following string(s) from a resource table instead: "Дахин суулгах уу?".</Issue>
+            </Message>
+            <Message Id="Masu" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="38">Correct the spelling of the unrecognized token 'Masu' in the literal '"C:\\Masu"'.</Issue>
+             <Issue Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="42">Correct the spelling of the unrecognized token 'Masu' in the literal '"Masu энэ компьютерд аль хэдийн суулгасан байна!"'.</Issue>
+             <Issue Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="84">Correct the spelling of the unrecognized token 'Masu' in the literal '"\\Masu"'.</Issue>
+            </Message>
+            <Message Id="Дахин" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="56">Correct the spelling of the unrecognized token 'Дахин' in the literal '"Дахин суулгах уу?"'.</Issue>
+            </Message>
+            <Message Id="аль" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="42">Correct the spelling of the unrecognized token 'аль' in the literal '"Masu энэ компьютерд аль хэдийн суулгасан байна!"'.</Issue>
+            </Message>
+            <Message Id="байна" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="42">Correct the spelling of the unrecognized token 'байна' in the literal '"Masu энэ компьютерд аль хэдийн суулгасан байна!"'.</Issue>
+            </Message>
+            <Message Id="компьютерд" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="42">Correct the spelling of the unrecognized token 'компьютерд' in the literal '"Masu энэ компьютерд аль хэдийн суулгасан байна!"'.</Issue>
+            </Message>
+            <Message Id="суулгасан" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="42">Correct the spelling of the unrecognized token 'суулгасан' in the literal '"Masu энэ компьютерд аль хэдийн суулгасан байна!"'.</Issue>
+            </Message>
+            <Message Id="суулгах" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="56">Correct the spelling of the unrecognized token 'суулгах' in the literal '"Дахин суулгах уу?"'.</Issue>
+            </Message>
+            <Message Id="уу" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="56">Correct the spelling of the unrecognized token 'уу' in the literal '"Дахин суулгах уу?"'.</Issue>
+            </Message>
+            <Message Id="хэдийн" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="42">Correct the spelling of the unrecognized token 'хэдийн' in the literal '"Masu энэ компьютерд аль хэдийн суулгасан байна!"'.</Issue>
+            </Message>
+            <Message Id="энэ" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="42">Correct the spelling of the unrecognized token 'энэ' in the literal '"Masu энэ компьютерд аль хэдийн суулгасан байна!"'.</Issue>
+            </Message>
+            <Message TypeName="SpecifyMessageBoxOptions" Category="Microsoft.Globalization" CheckId="CA1300" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="56">Change 'WebInstallerForm.Init()' to call the MessageBox.Show overload that specifies MessageBoxOptions, and make sure to set MessageBoxOptions.RightAlign and MessageBoxOptions.RtlReading if RightToLeft is set to RightToLeft.Yes on the parent control.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#InitializeComponent()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Windows.Forms.Control.set_Text(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.Designer.cs" Line="75">Method 'WebInstallerForm.InitializeComponent()' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "browse...".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.Designer.cs" Line="98">Method 'WebInstallerForm.InitializeComponent()' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Нээх".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.Designer.cs" Line="170">Method 'WebInstallerForm.InitializeComponent()' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Суулгах".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.Designer.cs" Line="110">Method 'WebInstallerForm.InitializeComponent()' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Цуцлах".</Issue>
+            </Message>
+            <Message Id="Нээх" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.Designer.cs" Line="98">Correct the spelling of the unrecognized token 'Нээх' in the literal '"Нээх"'.</Issue>
+            </Message>
+            <Message Id="Суулгах" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.Designer.cs" Line="170">Correct the spelling of the unrecognized token 'Суулгах' in the literal '"Суулгах"'.</Issue>
+            </Message>
+            <Message Id="Цуцлах" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.Designer.cs" Line="110">Correct the spelling of the unrecognized token 'Цуцлах' in the literal '"Цуцлах"'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#IsFileLocked(System.IO.FileInfo)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="206">Object 'stream' can be disposed more than once in method 'WebInstallerForm.IsFileLocked(FileInfo)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 206</Issue>
+            </Message>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="203">In externally visible method 'WebInstallerForm.IsFileLocked(FileInfo)', validate parameter 'file' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#isInstalled()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="93">The 'this' parameter (or 'Me' in Visual Basic) of 'WebInstallerForm.isInstalled()' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#IsRunAsAdmin()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="155">Modify 'WebInstallerForm.IsRunAsAdmin()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            </Message>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="151">The 'this' parameter (or 'Me' in Visual Basic) of 'WebInstallerForm.IsRunAsAdmin()' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Run(System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="354">Modify 'WebInstallerForm.Run(string)' to catch a more specific exception than 'object' or rethrow the exception.</Issue>
+            </Message>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="344">The 'this' parameter (or 'Me' in Visual Basic) of 'WebInstallerForm.Run(string)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Uninstall()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Windows.Forms.MessageBox.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="386">Method 'WebInstallerForm.Uninstall()' passes a literal string as parameter 'caption' of a call to 'MessageBox.Show(string, string, MessageBoxButtons, MessageBoxIcon)'. Retrieve the following string(s) from a resource table instead: "MASU POS LLC".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="386">Method 'WebInstallerForm.Uninstall()' passes a literal string as parameter 'text' of a call to 'MessageBox.Show(string, string, MessageBoxButtons, MessageBoxIcon)'. Retrieve the following string(s) from a resource table instead: "Устагдлаа!".</Issue>
+            </Message>
+            <Message Id="Устагдлаа" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="386">Correct the spelling of the unrecognized token 'Устагдлаа' in the literal '"Устагдлаа!"'.</Issue>
+            </Message>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="379">The 'this' parameter (or 'Me' in Visual Basic) of 'WebInstallerForm.Uninstall()' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
+            </Message>
+            <Message TypeName="SpecifyMessageBoxOptions" Category="Microsoft.Globalization" CheckId="CA1300" Status="Active" Created="2023-03-24 05:37:33Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\WebInstaller Project\WebInstaller" File="WebInstallerForm.cs" Line="386">Change 'WebInstallerForm.Uninstall()' to call the MessageBox.Show overload that specifies MessageBoxOptions, and make sure to set MessageBoxOptions.RightAlign and MessageBoxOptions.RtlReading if RightToLeft is set to RightToLeft.Yes on the parent control.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210">
+   <Name>Assemblies should have valid strong names</Name>
+   <Description>Either the assembly has no strong name, an invalid one, or the strong name is valid only because of the computer configuration. The assembly should not be deployed in this state. The most common causes of this are: 1) The assembly's contents were modified after it was signed. 2) The signing process failed. 3) The assembly was delay-signed. 4) A registry key existed that allowed the check to pass (where it would not have otherwise).</Description>
+   <Resolution Name="NoStrongName">Sign {0} with a strong name key.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182127.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="DeclareTypesInNamespaces" Category="Microsoft.Design" CheckId="CA1050">
+   <Name>Declare types in namespaces</Name>
+   <Description>A type should be defined inside a namespace to avoid duplication.</Description>
+   <Resolution Name="Default">{0} should be declared inside a namespace.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182134.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000">
+   <Name>Dispose objects before losing scope</Name>
+   <Description>If a disposable object is not explicitly disposed before all references to it are out of scope, the object will be disposed at some indeterminate time when the garbage collector runs the finalizer of the object. Because an exceptional event might occur that will prevent the finalizer of the object from running, the object should be explicitly disposed instead.</Description>
+   <Resolution Name="NonExceptionEdge">In method {0}, call System.IDisposable.Dispose on object {1} before all references to it are out of scope.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182289.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202">
+   <Name>Do not dispose objects multiple times</Name>
+   <Description>A correctly implemented Dispose method can be called multiple times without throwing an exception. However, this is not guaranteed and to avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.</Description>
+   <Resolution Name="Default">Object {0} can be disposed more than once in method {1}. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 206</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182334.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303">
+   <Name>Do not pass literals as localized parameters</Name>
+   <Description>Literal strings that are embedded in source code are difficult to localize. Avoid passing literal strings as arguments in circumstances where a localized string is generally expected.</Description>
+   <Resolution Name="KnownValue">Method {0} passes a literal string as parameter '{1}' of a call to {2}. Retrieve the following string(s) from a resource table instead: {3}.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182187.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031">
+   <Name>Do not catch general exception types</Name>
+   <Description>You should not catch Exception or SystemException. Catching generic exception types can hide run-time problems from the library user, and can complicate debugging. You should catch only those exceptions that you can handle gracefully.</Description>
+   <Resolution Name="Default">Modify {0} to catch a more specific exception than {1} or rethrow the exception.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182137.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201">
+   <Name>Do not raise reserved exception types</Name>
+   <Description>User code should not create and raise exceptions of certain types that are reserved by the runtime or which are of a too general exception type. Exception types that are too general include Exception, SystemException, and ApplicationException. Exception types that are reserved by the runtime include ThreadAbortException, OutOfMemoryException, ExecutionEngineException, and IndexOutOfRangeException.</Description>
+   <Resolution Name="TooGeneric">{0} creates an exception of type {1}, an exception type that is not sufficiently specific and should never be raised by user code. If this exception instance might be thrown, use a different exception type.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182338.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="usagerules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709">
+   <Name>Identifiers should be cased correctly</Name>
+   <Description>Type, namespace, and member identifiers are Pascal-cased. Parameter identifiers are camel-cased. Two letter acronyms within these identifiers should be upper-cased, for example, use System.IO instead of System.Io. Acronyms of three or more letters should be Pascal-cased, for example, use System.Xml instead of System.XML. The pascal-casing convention capitalizes the first letter of each word, as in BackColor. The camel-casing convention formats the first letter of the first word in lowercase and capitalizes the first letter of all subsequent words, as in backgroundColor. Although it may be common practice for some two letter acronyms to not be fully capitalized, violations of this rule should not be excluded for this reason. For example, 'DbConnection', is common but incorrect; use DBConnection. A violation of this rule might be required for compatibility with existing, non-managed symbol schemes. In general, however, these symbols should not be visible outside the assembly that uses them.</Description>
+   <Resolution Name="Assembly">Correct the casing of '{0}' in assembly name {1} by changing it to '{2}'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182240.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="85">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204">
+   <Name>Literals should be spelled correctly</Name>
+   <Description>This rule parses the literal string into words, tokenizing compound words, and checks the spelling of each word/token.</Description>
+   <Resolution Name="Default">Correct the spelling of the unrecognized token '{0}' in the literal '{1}'.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/bb264488.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014">
+   <Name>Mark assemblies with CLSCompliantAttribute</Name>
+   <Description>Assemblies should explicitly state their CLS compliance using the CLSCompliant attribute. An assembly without this attribute is not CLS-compliant. Assemblies, modules, and types can be CLS-compliant even if some parts of the assembly, module, or type are not CLS-compliant. The following rules apply: 1) If the element is marked CLSCompliant, any noncompliant members must have the CLSCompliant attribute present with its argument set to false. 2) A comparable CLS-compliant alternative member must be supplied for each member that is not CLS-compliant.</Description>
+   <Resolution Name="Default">Mark {0} with CLSCompliant(true) because it exposes externally visible types.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182156.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkAssembliesWithNeutralResourcesLanguage" Category="Microsoft.Performance" CheckId="CA1824">
+   <Name>Mark assemblies with NeutralResourcesLanguageAttribute</Name>
+   <Description>The NeutralResourcesLanguage attribute informs the ResourceManager of the language used to render the neutral culture's resources for an assembly. When looking up resources in the same culture as the neutral resources language, the ResourceManager automatically uses the resources located in the main assembly, instead of searching for a satellite assembly with the current user interface culture for the current thread. This will improve lookup performance for the first resource you load and can reduce your working set.</Description>
+   <Resolution Name="Default">Because assembly {0} contains a ResX-based resource file, mark it with the NeutralResourcesLanguage attribute, specifying the language of the resources within the assembly. This could improve lookup performance the first time a resource is retrieved.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb385967.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822">
+   <Name>Mark members as static</Name>
+   <Description>Methods which do not access instance data or call instance methods can be marked as static (Shared in Visual Basic). After doing so, the compiler will emit non-virtual call sites to these members which will prevent a check at runtime for each call that ensures the current object pointer is non-null. This can result in a measurable performance gain for performance-sensitive code. In some cases, the failure to access the current object instance represents a correctness issue.</Description>
+   <Resolution Name="Default">The 'this' parameter (or 'Me' in Visual Basic) of {0} is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms245046.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801">
+   <Name>Review unused parameters</Name>
+   <Description>Review parameters in non-virtual methods that are not used in the method body to ensure no correctness exists around failure to access them. Unused parameters incur maintenance and performance costs. Sometimes a violation of this rule can point to an implementation bug in the method (i.e. the parameter should actually have been used in the method body). Exclude warnings of this rule if the parameter has to exist because of backward compatibility.</Description>
+   <Resolution Name="Default">Parameter {0} of {1} is never used. Remove the parameter or use it in the method body.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182268.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="usagerules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305">
+   <Name>Specify IFormatProvider</Name>
+   <Description>If an overload exists that takes an IFormatProvider argument, it should always be called in favor of an overload that does not. Some methods in the runtime convert a value to or from a string representation and take a string parameter that contains one or more characters, called format specifiers, which indicate how the value is to be converted. If the meaning of the format specifier varies by culture, a formatting object supplies the actual characters used in the string representation. In scenarios where sorting and comparison behavior should never change between cultures, specify CultureInfo.InvariantCulture, otherwise, specify CultureInfo.CurrentCulture.</Description>
+   <Resolution Name="IFormatProviderAlternateString">Because the behavior of {0} could vary based on the current user's locale settings, replace this call in {1} with a call to {2}. If the result of {2} will be displayed to the user, specify {3} as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify {4}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182190.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="globalizationrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="SpecifyMessageBoxOptions" Category="Microsoft.Globalization" CheckId="CA1300">
+   <Name>Specify MessageBoxOptions</Name>
+   <Description>In order to run correctly on right-to-left systems, all calls to MessageBox.Show should use the overload that specifies MessageBoxOptions as an argument. Programs should detect whether they are running on a right-to-left system at run-time and pass the appropriate MessageBoxOptions value in order to display correctly.</Description>
+   <Resolution Name="Default">Change {0} to call the MessageBox.Show overload that specifies MessageBoxOptions, and make sure to set MessageBoxOptions.RightAlign and MessageBoxOptions.RtlReading if RightToLeft is set to RightToLeft.Yes on the parent control.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182191.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="globalizationrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062">
+   <Name>Validate arguments of public methods</Name>
+   <Description>All reference arguments passed to externally visible methods should be checked against null (Nothing in VB). If appropriate, throw a System.ArgumentNullException when the argument is null.</Description>
+   <Resolution Name="Default">In externally visible method {0}, validate parameter '{1}' before using it.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182182.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="16.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+</FxCopReport>

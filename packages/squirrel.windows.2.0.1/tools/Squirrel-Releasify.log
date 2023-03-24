@@ -1,0 +1,27 @@
+﻿[01/03/23 17:08:33] info: Program: Starting Squirrel Updater: --releasify Installer.1.0.0.nupkg
+[01/03/23 17:08:33] info: Program: Bootstrapper EXE found at:D:\WebInstaller Project\packages\squirrel.windows.2.0.1\tools\Setup.exe
+[01/03/23 17:08:33] info: Program: Creating release package: D:\WebInstaller Project\Releases\Installer.1.0.0.nupkg
+[01/03/23 17:08:33] info: ReleasePackage: Creating release package: D:\WebInstaller Project\Releases\Installer.1.0.0.nupkg => D:\WebInstaller Project\Releases\Installer-1.0.0-full.nupkg
+[01/03/23 17:08:34] info: ReleasePackage: Extracting dependent packages: []
+[01/03/23 17:08:34] info: ReleasePackage: Removing unnecessary data
+[01/03/23 17:08:34] info: ReleasePackage: No release notes found in C:\Users\user\AppData\Local\SquirrelTemp\tempa\Installer.nuspec
+[01/03/23 17:08:34] info: Program: Building embedded zip file for Setup.exe
+[01/03/23 17:08:38] info: Program: Finished Squirrel Updater
+[01/03/23 17:51:25] info: Program: Starting Squirrel Updater: --releasify Installer.1.0.0.nupkg
+[01/03/23 17:51:25] info: Program: Bootstrapper EXE found at:D:\WebInstaller Project\packages\squirrel.windows.2.0.1\tools\Setup.exe
+[01/03/23 17:51:25] info: Program: Creating release package: D:\WebInstaller Project\Releases\Installer.1.0.0.nupkg
+[01/03/23 17:51:25] info: ReleasePackage: Creating release package: D:\WebInstaller Project\Releases\Installer.1.0.0.nupkg => D:\WebInstaller Project\Releases\Installer-1.0.0-full.nupkg
+[01/03/23 17:51:25] info: ReleasePackage: Extracting dependent packages: []
+[01/03/23 17:51:25] info: ReleasePackage: Removing unnecessary data
+[01/03/23 17:51:25] info: ReleasePackage: No release notes found in C:\Users\user\AppData\Local\SquirrelTemp\tempa\Installer.nuspec
+[01/03/23 17:51:26] info: Program: Building embedded zip file for Setup.exe
+[01/03/23 17:51:26] error: Program: Failed to update Setup.exe with new Zip file: System.Exception: Failed to write Zip to Setup.exe!
+
+Setup: D:\WebInstaller Project\Releases\Setup.exe, Zip: C:\Users\user\AppData\Local\Temp\tmp2804.tmp
+Starting to read in Zip file!
+Updating Resource!
+Finished!
+Failed to update resource
+Usage: WriteZipToSetup [Setup.exe template] [Zip File]
+   at Squirrel.Update.Program.Releasify(String package, String targetDir, String packagesDir, String bootstrapperExe, String backgroundGif, String signingOpts, String baseUrl, String setupIcon, Boolean generateMsi, Boolean packageAs64Bit, String frameworkVersion, Boolean generateDeltas)
+[01/03/23 17:51:29] info: Program: Finished Squirrel Updater

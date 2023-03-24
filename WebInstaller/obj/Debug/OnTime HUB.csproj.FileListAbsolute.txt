@@ -1,0 +1,19 @@
+C:\Users\Baynaa\source\repos\OnTime HUB\OnTime HUB\bin\Debug\OnTime HUB.exe.config
+C:\Users\Baynaa\source\repos\OnTime HUB\OnTime HUB\bin\Debug\OnTime HUB.exe
+C:\Users\Baynaa\source\repos\OnTime HUB\OnTime HUB\bin\Debug\OnTime HUB.pdb
+C:\Users\Baynaa\source\repos\OnTime HUB\OnTime HUB\bin\Debug\DevExpress.Printing.v21.1.Core.dll
+C:\Users\Baynaa\source\repos\OnTime HUB\OnTime HUB\bin\Debug\DevExpress.Printing.v21.1.Core.xml
+C:\Users\Baynaa\source\repos\OnTime HUB\OnTime HUB\bin\Debug\de\DevExpress.Printing.v21.1.Core.resources.dll
+C:\Users\Baynaa\source\repos\OnTime HUB\OnTime HUB\bin\Debug\es\DevExpress.Printing.v21.1.Core.resources.dll
+C:\Users\Baynaa\source\repos\OnTime HUB\OnTime HUB\bin\Debug\ja\DevExpress.Printing.v21.1.Core.resources.dll
+C:\Users\Baynaa\source\repos\OnTime HUB\OnTime HUB\bin\Debug\ru\DevExpress.Printing.v21.1.Core.resources.dll
+C:\Users\Baynaa\source\repos\OnTime HUB\OnTime HUB\obj\Debug\OnTime HUB.csprojAssemblyReference.cache
+C:\Users\Baynaa\source\repos\OnTime HUB\OnTime HUB\obj\Debug\OnTime_HUB.Installer.resources
+C:\Users\Baynaa\source\repos\OnTime HUB\OnTime HUB\obj\Debug\OnTime_HUB.Properties.Resources.resources
+C:\Users\Baynaa\source\repos\OnTime HUB\OnTime HUB\obj\Debug\OnTime HUB.csproj.GenerateResource.cache
+C:\Users\Baynaa\source\repos\OnTime HUB\OnTime HUB\obj\Debug\OnTime HUB.csproj.CoreCompileInputs.cache
+C:\Users\Baynaa\source\repos\OnTime HUB\OnTime HUB\obj\Debug\OnTime HUB.csproj.CopyComplete
+C:\Users\Baynaa\source\repos\OnTime HUB\OnTime HUB\obj\Debug\OnTime HUB.exe
+C:\Users\Baynaa\source\repos\OnTime HUB\OnTime HUB\obj\Debug\OnTime HUB.pdb
+C:\Users\Baynaa\source\repos\OnTime HUB\OnTime HUB\obj\Debug\OnTime HUB.exe.licenses
+C:\Users\Baynaa\source\repos\OnTime HUB\OnTime HUB\obj\Debug\OnTimeHUB.Installer.resources

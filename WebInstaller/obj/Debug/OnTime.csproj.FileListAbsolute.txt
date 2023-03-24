@@ -1,0 +1,22 @@
+C:\Users\Baynaa\source\repos\OnTime HUB\OnTime HUB\obj\Debug\OnTime.WebInstallerForm.resources
+C:\Users\Baynaa\source\repos\OnTime HUB\OnTime HUB\obj\Debug\OnTime_HUB.Properties.Resources.resources
+C:\Users\Baynaa\source\repos\OnTime HUB\OnTime HUB\obj\Debug\OnTime.csproj.GenerateResource.cache
+C:\Users\Baynaa\source\repos\OnTime HUB\OnTime HUB\obj\Debug\OnTime HUB.exe.licenses
+C:\Users\Baynaa\source\repos\OnTime HUB\OnTime HUB\obj\Debug\OnTime.csproj.CoreCompileInputs.cache
+D:\OnTime HUB\OnTime HUB\obj\Debug\OnTime.csproj.AssemblyReference.cache
+D:\OnTime HUB\OnTime HUB\obj\Debug\OnTime.csproj.SuggestedBindingRedirects.cache
+D:\OnTime HUB\OnTime HUB\obj\Debug\OnTime.WebInstallerForm.resources
+D:\OnTime HUB\OnTime HUB\obj\Debug\OnTime_HUB.Properties.Resources.resources
+D:\OnTime HUB\OnTime HUB\obj\Debug\OnTime.csproj.GenerateResource.cache
+D:\OnTime HUB\OnTime HUB\obj\Debug\Updte.exe.licenses
+D:\OnTime HUB\OnTime HUB\obj\Debug\OnTime.csproj.CoreCompileInputs.cache
+D:\OnTime HUB\OnTime HUB\obj\Debug\Updte.TrustInfo.xml
+D:\OnTime HUB\OnTime HUB\obj\Debug\Updte.exe.manifest
+D:\OnTime HUB\OnTime HUB\obj\Debug\Updte.exe
+D:\OnTime HUB\OnTime HUB\obj\Debug\Updte.pdb
+D:\OnTime HUB\OnTime HUB\bin\Debug\Updte.exe.config
+D:\OnTime HUB\OnTime HUB\bin\Debug\Updte.exe.manifest
+D:\OnTime HUB\OnTime HUB\bin\Debug\Updte.application
+D:\OnTime HUB\OnTime HUB\bin\Debug\Updte.exe
+D:\OnTime HUB\OnTime HUB\bin\Debug\Updte.pdb
+D:\OnTime HUB\OnTime HUB\obj\Debug\Updte.application
